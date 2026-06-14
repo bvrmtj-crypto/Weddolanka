@@ -270,7 +270,7 @@ function animateCounter(element, target) {
 }
 
 // Contact Form
-function initContactForm() {
+/*function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
@@ -279,7 +279,34 @@ function initContactForm() {
         showToast('Message sent successfully! We will contact you soon.');
         form.reset();
     });
+}*/
+
+function initContactForm() {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    emailjs.init("YOUR_PUBLIC_KEY");
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value
+        })
+        .then(function() {
+            showToast('Message sent successfully!');
+            form.reset();
+        })
+        .catch(function(error) {
+            showToast('Failed to send message.');
+            console.error(error);
+        });
+    });
 }
+
+
 
 // Toast Notification
 function showToast(message) {
