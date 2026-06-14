@@ -296,7 +296,7 @@ function initContactForm() {
             message: document.getElementById('message').value
         })
         .then(function() {
-            showToast('Message sent successfully!');
+            showToast('Message sent successfully! We will contact you soon.');
             form.reset();
         })
         .catch(function(error) {
