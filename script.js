@@ -289,8 +289,8 @@ function initContactForm() {
         e.preventDefault();
 
         emailjs.send(
-            'YOUR_SERVICE_ID',
-            'YOUR_TEMPLATE_ID',
+            'service_1a2b3c4d',
+            'template_abcd1234',
             {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
