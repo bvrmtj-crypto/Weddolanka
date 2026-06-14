@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaddoLanka - Sri Lanka's Best Service Providers</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fas fa-hands-holding-circle"></i>
+                <span>WaddoLanka</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#districts" class="nav-link">Districts</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Sri Lanka's Best <span>Service Providers</span></h1>
+                <p>Connect with trusted professionals and skilled workers near you.</p>
+
+                <div class="search-box">
+                    <div class="search-field">
+                        <i class="fas fa-tools"></i>
+                        <select id="serviceSelect">
+                            <option value="">All Services</option>
+                            <option value="garage">Vehicle Garage</option>
+                            <option value="electrician">Electrician</option>
+                            <option value="carpenter">Carpenter</option>
+                            <option value="plumber">Plumber</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="catering">Food & Catering</option>
+                            <option value="doctor">Doctor Service</option>
+                            <option value="farmer">Farmers</option>
+                            <option value="dayworker">Day Workers</option>
+                            <option value="tire">Tire Service</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <select id="districtSelect">
+                            <option value="">All Districts</option>
+                            <option value="colombo">Colombo</option>
+                            <option value="gampaha">Gampaha</option>
+                            <option value="kalutara">Kalutara</option>
+                            <option value="kandy">Kandy</option>
+                            <option value="galle">Galle</option>
+                            <option value="matara">Matara</option>
+                            <option value="kurunegala">Kurunegala</option>
+                            <option value="anuradhapura">Anuradhapura</option>
+                            <option value="jaffna">Jaffna</option>
+                            <option value="batticaloa">Batticaloa</option>
+                            <option value="trincomalee">Trincomalee</option>
+                            <option value="ratnapura">Ratnapura</option>
+                            <option value="badulla">Badulla</option>
+                            <option value="nuwara-eliya">Nuwara Eliya</option>
+                            <option value="hambantota">Hambantota</option>
+                        </select>
+                    </div>
+                    <button class="btn-search" onclick="searchProviders()">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num" data-target="2500">0</span>
+                        <span class="stat-label">Providers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num" data-target="25">0</span>
+                        <span class="stat-label">Districts</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num" data-target="10">0</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num" data-target="15000">0</span>
+                        <span class="stat-label">Happy Users</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Services</span>
+                <h2>Popular Service Categories</h2>
+                <p>Find professionals across every industry in Sri Lanka</p>
+            </div>
+            <div class="services-grid" id="servicesGrid"></div>
+        </div>
+    </section>
+
+    <!-- Featured Providers -->
+    <section class="providers" id="providers">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Top Rated</span>
+                <h2>Featured Service Providers</h2>
+                <p>Hand-picked professionals with excellent ratings</p>
+            </div>
+            <div class="providers-grid" id="providersGrid"></div>
+        </div>
+    </section>
+
+    <!-- Districts Section -->
+    <section class="districts" id="districts">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Coverage</span>
+                <h2>Districts We Cover</h2>
+                <p>Serving every corner of Sri Lanka</p>
+            </div>
+            <div class="districts-grid" id="districtsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why Us</span>
+                <h2>Why Choose WaddoLanka?</h2>
+                <p>The most trusted way to find local professionals</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Trusted Providers</h3>
+                    <p>Every service provider is verified for your safety and peace of mind.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-search"></i></div>
+                    <h3>Easy Search</h3>
+                    <p>Find the right professional in seconds with our powerful search.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3>Island-wide Coverage</h3>
+                    <p>From Jaffna to Galle, we cover all districts across Sri Lanka.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Access WaddoLanka on any device - desktop, tablet, or smartphone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Get in Touch</span>
+                    <h2>Contact Us</h2>
+                    <p>Have questions or need help? We are here to assist you.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div><strong>Phone</strong><span>+94 77 123 4567</span></div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div><strong>Email</strong><span>info@waddolanka.lk</span></div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div><strong>Address</strong><span>Colombo, Sri Lanka</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Send Message</h3>
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fas fa-hands-holding-circle"></i>
+                        <span>WaddoLanka</span>
+                    </a>
+                    <p>Sri Lanka's trusted platform for finding skilled self-employed professionals.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#districts">Districts</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Electricians</a></li>
+                        <li><a href="#">Plumbers</a></li>
+                        <li><a href="#">Carpenters</a></li>
+                        <li><a href="#">Teachers</a></li>
+                        <li><a href="#">Doctors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +94 77 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@waddolanka.lk</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WaddoLanka. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
