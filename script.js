@@ -285,25 +285,27 @@ function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
+    emailjs.init("9hZuW6Oa1w8z4REnT");
+
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
         emailjs.send(
-            'service_1a2b3c4d',
-            'template_abcd1234',
+            "service_46axhme",
+            "YOUR_TEMPLATE_ID",
             {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
                 message: document.getElementById('message').value
             }
         )
-        .then(function() {
-            alert('Message sent successfully!');
+        .then(function(response) {
+            alert("Message sent successfully!");
             form.reset();
         })
         .catch(function(error) {
-            console.error('EmailJS Error:', error);
-            alert('Failed to send message.');
+            alert("Failed to send message.");
+            console.error(error);
         });
     });
 }
