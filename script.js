@@ -294,8 +294,8 @@ function initContactForm() {
             "service_46axhme",
             "YOUR_TEMPLATE_ID",
             {
-                from_name: document.getElementById('name').value,
-                from_email: document.getElementById('email').value,
+                from_name: document.getElementById('manoj').value,
+                from_email: document.getElementById('mtjayarathne86@gmail.com').value,
                 message: document.getElementById('message').value
             }
         )
