@@ -4,16 +4,16 @@
 
 // Data
 const services = [
-    { id: 'garage', name: 'Vehicle Garage', icon: 'fa-car', desc: 'Find trusted mechanics and auto repair shops.' },
-    { id: 'electrician', name: 'Electrician', icon: 'fa-bolt', desc: 'Professional electrical services for your home.' },
-    { id: 'carpenter', name: 'Carpenter', icon: 'fa-hammer', desc: 'Skilled woodworkers for furniture and repairs.' },
-    { id: 'plumber', name: 'Plumber', icon: 'fa-faucet', desc: 'Expert plumbing solutions for all your needs.' },
-    { id: 'teacher', name: 'Teacher', icon: 'fa-chalkboard-teacher', desc: 'Qualified tutors and educators for all subjects.' },
+    { id: 'garage', name: 'Garage & Tire Service', icon: 'fa-car', desc: 'Find trusted mechanics and All tire services.' },
+    { id: 'electrician', name: 'Electrician & Plumber', icon: 'fa-bolt', desc: 'Professional electrical,Plumber services for your home.' },
+    { id: 'carpenter', name: 'Carpenter & Masons', icon: 'fa-hammer', desc: 'Professional carpentry, masonry, repair, and renovation services.' },
+    { id: 'plumber', name: 'Hotel & Accommodation', icon: 'fa-faucet', desc: 'Hotels, guest houses, and accommodation services for every budget.' },
+    { id: 'teacher', name: 'Teachers & Classes', icon: 'fa-chalkboard-teacher', desc: 'Qualified tutors and educators for all subjects.' },
     { id: 'catering', name: 'Food & Catering', icon: 'fa-utensils', desc: 'Delicious food services for events and daily meals.' },
     { id: 'doctor', name: 'Doctor Service', icon: 'fa-user-md', desc: 'Medical professionals for home visits and clinics.' },
-    { id: 'farmer', name: 'Farmers', icon: 'fa-tractor', desc: 'Fresh produce and agricultural services.' },
+    { id: 'farmer', name: 'Farm and Culitivation', icon: 'fa-tractor', desc: 'Fresh Farm products and agricultural services.' },
     { id: 'dayworker', name: 'Day Workers', icon: 'fa-people-carry', desc: 'Reliable workers for daily labor needs.' },
-    { id: 'tire', name: 'Tire Service', icon: 'fa-circle', desc: 'Tire repair, replacement, and maintenance.' }
+    { id: 'tire', name: 'Transport & Safari', icon: 'fa-circle', desc: 'Transport, taxi, tour, and safari services.' }
 ];
 
 const districts = [
