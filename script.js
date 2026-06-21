@@ -282,7 +282,7 @@ function animateCounter(element, target) {
     });
 }*/
 
-function initContactForm() {
+/*function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
@@ -296,6 +296,34 @@ function initContactForm() {
                 form.reset();
             }, function(error) {
                 alert('Failed to send message: ' + JSON.stringify(error));
+            });
+    });
+}*/
+
+function initContactForm() {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // 1. Manually grab the value from the input field
+        const nameValue = document.getElementById('userName').value;
+
+        // 2. Map it directly to the template variable {{name}}
+        const templateParams = {
+            name: nameValue,
+            // If you use other fields in your template, add them here too:
+            // message: form.querySelector('[name="message"]').value 
+        };
+
+        // 3. Use emailjs.send (NOT sendForm) to pass the manual data
+        emailjs.send('service_46axhme', 'template_gdso42s', templateParams)
+            .then(function(response) {
+                alert('Message sent successfully!');
+                form.reset();
+            }, function(error) {
+                alert('Failed to send: ' + JSON.stringify(error));
             });
     });
 }
