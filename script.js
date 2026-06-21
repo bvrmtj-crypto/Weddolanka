@@ -39,7 +39,7 @@ const providers = [
     { name: 'Lakmal Electrical', category: 'electrician', district: 'gampaha', phone: '+94 76 345 6789', rating: 4.7, desc: 'Residential and commercial electrical solutions.' },
     { name: 'Nimal Carpentry', category: 'carpenter', district: 'kandy', phone: '+94 71 456 7890', rating: 4.9, desc: 'Custom furniture and woodwork specialists.' },
     { name: 'Priya Plumbing', category: 'plumber', district: 'galle', phone: '+94 91 234 5678', rating: 4.6, desc: '24/7 emergency plumbing services available.' },
-    { name: 'Saman Tuition', category: 'teacher', district: 'colombo', phone: '+94 77 567 8901', rating: 4.8, desc: 'O/L and A/L classes for all subjects.' },
+    { name: 'Avanthi Teacher', category: 'teacher', district: 'colombo', phone: '+94 77 567 8901', rating: 4.8, desc: 'O/L and A/L classes for all subjects in Kegalle.' },
     { name: 'Kumari Catering', category: 'catering', district: 'matara', phone: '+94 41 345 6789', rating: 4.7, desc: 'Wedding and event catering services.' },
     { name: 'Dr. Perera Clinic', category: 'doctor', district: 'kurunegala', phone: '+94 37 456 7890', rating: 4.9, desc: 'General practitioner with home visits.' },
     { name: 'Rohan Farms', category: 'farmer', district: 'anuradhapura', phone: '+94 25 567 8901', rating: 4.5, desc: 'Organic vegetables and fresh produce.' },
