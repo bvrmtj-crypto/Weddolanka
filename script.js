@@ -309,6 +309,7 @@ function initContactForm() {
 
         // 1. Manually grab the value from the input field
         const nameValue = document.getElementById('userName').value;
+        const messageValue = document.getElementById('userMessage').value;
 
         // 2. Map it directly to the template variable {{name}}
         const templateParams = {
