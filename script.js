@@ -286,28 +286,17 @@ function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
-    emailjs.init("9hZuW6Oa1w8z4REnT");
-
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        emailjs.send(
-            "service_46axhme",
-            "YOUR_TEMPLATE_ID",
-            {
-                from_name: document.getElementById('manoj').value,
-                from_email: document.getElementById('mtjayarathne86@gmail.com').value,
-                message: document.getElementById('message').value
-            }
-        )
-        .then(function(response) {
-            alert("Message sent successfully!");
-            form.reset();
-        })
-        .catch(function(error) {
-            alert("Failed to send message.");
-            console.error(error);
-        });
+        // Send the form data using EmailJS
+        emailjs.sendForm('service_46axhme', 'template_gdso42s', this)
+            .then(function() {
+                alert('Message sent successfully!');
+                form.reset();
+            }, function(error) {
+                alert('Failed to send message: ' + JSON.stringify(error));
+            });
     });
 }
 
