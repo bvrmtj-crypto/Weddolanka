@@ -314,6 +314,7 @@ function initContactForm() {
         // 2. Map it directly to the template variable {{name}}
         const templateParams = {
             name: nameValue,
+            message:messageValue,
             // If you use other fields in your template, add them here too:
             // message: form.querySelector('[name="message"]').value 
         };
