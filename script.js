@@ -31,7 +31,8 @@ const districts = [
     { id: 'ratnapura', name: 'Ratnapura', count: 178 },
     { id: 'badulla', name: 'Badulla', count: 145 },
     { id: 'nuwara-eliya', name: 'Nuwara Eliya', count: 123 },
-    { id: 'hambantota', name: 'Hambantota', count: 98 }
+    { id: 'hambantota', name: 'Hambantota', count: 98 },
+    { id: 'hambantota', name: 'Kegalle', count: 1 }
 ];
 
 const providers = [
